@@ -8,7 +8,10 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+	$query = new \MagnoKsm\DB\Sql();
+	$result = $query->select('SELECT * FROM tb_users');
+
+	echo json_encode($result);
 
 });
 

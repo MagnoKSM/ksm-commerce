@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitb1a3b90307c514525bbfaff5794a88c5
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/magnoksm/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'M' => 
+        array (
+            'MagnoKsm\\' => 9,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'MagnoKsm\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/magnoksm/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInitb1a3b90307c514525bbfaff5794a88c5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInitb1a3b90307c514525bbfaff5794a88c5::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb1a3b90307c514525bbfaff5794a88c5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb1a3b90307c514525bbfaff5794a88c5::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitb1a3b90307c514525bbfaff5794a88c5::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitb1a3b90307c514525bbfaff5794a88c5::$classMap;
 

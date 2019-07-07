@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '' => array($vendorDir . '/magnoksm/php-classes/src'),
+    'MagnoKsm\\' => array($vendorDir . '/magnoksm/php-classes/src'),
 );
